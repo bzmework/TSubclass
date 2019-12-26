@@ -1,0 +1,26 @@
+HKCR
+{
+	TSubclass.MouseHook.1 = s 'MouseHook Class'
+	{
+		CLSID = s '{AB3EF696-ED27-4B99-A335-114D13BB366E}'
+	}
+	TSubclass.MouseHook = s 'MouseHook Class'
+	{
+		CLSID = s '{AB3EF696-ED27-4B99-A335-114D13BB366E}'
+		CurVer = s 'TSubclass.MouseHook.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AB3EF696-ED27-4B99-A335-114D13BB366E} = s 'MouseHook Class'
+		{
+			ProgID = s 'TSubclass.MouseHook.1'
+			VersionIndependentProgID = s 'TSubclass.MouseHook'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{A94EC24D-AF4B-47FF-9449-7C18BB0D585F}'
+		}
+	}
+}

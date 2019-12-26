@@ -1,0 +1,26 @@
+HKCR
+{
+	TSubclass.WinHook.1 = s 'WinHook Class'
+	{
+		CLSID = s '{BB071AA9-FAEE-4A67-A7E4-207EAC3FAE34}'
+	}
+	TSubclass.WinHook = s 'WinHook Class'
+	{
+		CLSID = s '{BB071AA9-FAEE-4A67-A7E4-207EAC3FAE34}'
+		CurVer = s 'TSubclass.WinHook.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {BB071AA9-FAEE-4A67-A7E4-207EAC3FAE34} = s 'WinHook Class'
+		{
+			ProgID = s 'TSubclass.WinHook.1'
+			VersionIndependentProgID = s 'TSubclass.WinHook'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{A94EC24D-AF4B-47FF-9449-7C18BB0D585F}'
+		}
+	}
+}

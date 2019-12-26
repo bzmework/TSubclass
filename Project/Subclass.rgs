@@ -1,0 +1,26 @@
+HKCR
+{
+	TSubclass.Subclass.1 = s 'Subclass Class'
+	{
+		CLSID = s '{8494AA18-544F-47FD-A6DA-5EB35762EABF}'
+	}
+	TSubclass.Subclass = s 'Subclass Class'
+	{
+		CLSID = s '{8494AA18-544F-47FD-A6DA-5EB35762EABF}'
+		CurVer = s 'TSubclass.Subclass.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8494AA18-544F-47FD-A6DA-5EB35762EABF} = s 'Subclass Class'
+		{
+			ProgID = s 'TSubclass.Subclass.1'
+			VersionIndependentProgID = s 'TSubclass.Subclass'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{A94EC24D-AF4B-47FF-9449-7C18BB0D585F}'
+		}
+	}
+}

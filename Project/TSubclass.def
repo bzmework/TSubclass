@@ -1,0 +1,9 @@
+; TSubclass.def : Declares the module parameters.
+
+LIBRARY      "TSubclass.DLL"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE

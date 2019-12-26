@@ -1,0 +1,141 @@
+// TSubclass.idl : IDL source for TSubclass.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TSubclass.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(A94EC24D-AF4B-47FF-9449-7C18BB0D585F),
+	version(1.0),
+	helpstring("eLong Subclass Library")
+]
+library TSubclass
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//
+	// 子类
+	//
+
+	[
+		object,
+		uuid(015EC82A-8F57-4CD9-81EE-8BE15DFD25FA),
+		dual,
+		helpstring("ISubclass Interface"),
+		pointer_default(unique)
+	]
+	interface ISubclass : IDispatch
+	{
+		[id(0), helpstring("关于")] HRESULT AboutMe();
+		[propget, id(1), helpstring("返回/设置要进行子类化的窗口句柄")] HRESULT hWnd([out, retval] long *pVal);
+		[propput, id(1), helpstring("返回/设置要进行子类化的窗口句柄")] HRESULT hWnd([in] long newVal);
+		[id(2), helpstring("调用默认窗口处理函数")] HRESULT CallWndProc([in] int uMsg, [in] long wParam, [in] long lParam, [out, retval] long *pVal);
+	};
+
+	[
+		uuid(0BA49ED4-EE6E-4128-8F15-27B82A1DC583),
+		helpstring("_ISubclassEvents Interface")
+	]
+	dispinterface _ISubclassEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("消息处理,设置bHandled=True表示消息现在已经被处理,不用再交给默认窗口函数处理")] HRESULT OnMessage([in] long uMsg, [in] long wParam, [in] long lParam, [out] VARIANT_BOOL* bHandled, [out, retval] long* lresult);
+		[id(2), helpstring("消息处理以后,如果消息已经被处理,该事件不再接收消息")] HRESULT AfterMessage([in] long uMsg, [in] long wParam, [in] long lParam);
+	};
+
+	[
+		uuid(8494AA18-544F-47FD-A6DA-5EB35762EABF),
+		helpstring("子类化窗口")
+	]
+	coclass Subclass
+	{
+		[default] interface ISubclass;
+		[default, source] dispinterface _ISubclassEvents;
+	};
+
+	//
+	// 窗口Hook
+	//
+
+	[
+		object,
+		uuid(925F2945-2C28-4210-A51A-62595A6B3DD9),
+		dual,
+		helpstring("IWinHook Interface"),
+		pointer_default(unique)
+	]
+	interface IWinHook : IDispatch
+	{
+		[id(0), helpstring("关于")] HRESULT AboutMe();
+		[id(1), helpstring("Hook窗口")] HRESULT Hook([in] long hWnd, [out,retval] VARIANT_BOOL* outVal);
+		[id(2), helpstring("Hook窗口及其所有子窗口")] HRESULT HookAll([in] long hWnd, [out,retval] VARIANT_BOOL* outVal);
+		[id(3), helpstring("卸载窗口Hook")] HRESULT UnHook([out,retval] VARIANT_BOOL* outVal);
+	};
+
+	[
+		uuid(4BFAAC50-90E1-4875-A474-1F0F13F3FF5F),
+		helpstring("_IWinHookEvents Interface")
+	]
+	dispinterface _IWinHookEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("消息处理")] HRESULT OnMessage([in] long hWnd, [in] long uMsg, [in] long wParam, [in] long lParam, [out] VARIANT_BOOL* bEatIt);
+	};
+	
+	[
+		uuid(BB071AA9-FAEE-4A67-A7E4-207EAC3FAE34),
+		helpstring("窗口Hook, 仅支持进程内窗口HOOK, 不支持全局(所有进程)HOOK")
+	]
+	coclass WinHook
+	{
+		[default] interface IWinHook;
+		[default, source] dispinterface _IWinHookEvents;
+	};
+
+
+	//
+	// 鼠标Hook
+	//
+
+	[
+		object,
+		uuid(9E6749D6-B954-4A45-82E2-64B8176E2D2B),
+		dual,
+		helpstring("IMouseHook Interface"),
+		pointer_default(unique)
+	]
+	interface IMouseHook : IDispatch
+	{
+		[id(0), helpstring("关于")] HRESULT AboutMe();
+		[id(1), helpstring("鼠标Hook")] HRESULT Hook([out,retval] VARIANT_BOOL* outVal);
+		[id(2), helpstring("卸载鼠标Hook")] HRESULT UnHook([out,retval] VARIANT_BOOL* outVal);
+	};
+
+	[
+		uuid(F5D8B63F-4E34-415B-A199-AF4F3505879A),
+		helpstring("_IMouseHookEvents Interface")
+	]
+	dispinterface _IMouseHookEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("消息处理")] HRESULT OnMessage([in] long hWnd, [in] long uMsg, [in] long x, [in] long y, [in] long wMouseData, [out] VARIANT_BOOL* bEatIt);
+	};
+
+	[
+		uuid(AB3EF696-ED27-4B99-A335-114D13BB366E),
+		helpstring("鼠标Hook, 仅支持进程内鼠标HOOK, 不支持全局(所有进程)HOOK")
+	]
+	coclass MouseHook
+	{
+		[default] interface IMouseHook;
+		[default, source] dispinterface _IMouseHookEvents;
+	};
+
+};
