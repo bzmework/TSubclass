@@ -21,7 +21,7 @@ Begin VB.Form frmMain
       Height          =   375
       Left            =   1410
       TabIndex        =   2
-      Text            =   "Text3"
+      Text            =   "ÓÒ¼ü²Ëµ¥±»ÆÁ±Î"
       Top             =   2400
       Width           =   4785
    End
