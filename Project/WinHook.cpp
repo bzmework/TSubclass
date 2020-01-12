@@ -117,7 +117,7 @@ STDMETHODIMP CWinHook::InterfaceSupportsErrorInfo(REFIID riid)
 	};
 	for (int i=0; i < sizeof(arr) / sizeof(arr[0]); i++)
 	{
-		if (InlineIsEqualGUID(*arr[i],riid))
+		if (::InlineIsEqualGUID(*arr[i],riid))
 			return S_OK;
 	}
 	return S_FALSE;
@@ -353,7 +353,7 @@ void CWinHook::Destory()
 		//Set mclsWinHook1 = New TSubclass.WinHook
 		//Set mclsWinHook2 = New TSubclass.WinHook
 		//...
-		for(int i=0; i<gWnds; i++)
+		for(i=0; i<gWnds; i++)
 		{
 			if(gWnd[i].pOwner == this) //当前对象
 			{
@@ -386,7 +386,7 @@ void CWinHook::Destory()
 		if(bUnhook)
 		{
 			DWORD id = GetCurrentThreadId();
-			for(int i=0; i<gWinHooks; i++)
+			for(i=0; i<gWinHooks; i++)
 			{
 				if(gWinHook[i].id == id)//当前进程
 				{

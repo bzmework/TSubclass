@@ -6,87 +6,95 @@
 --------------------Configuration: TSubclass - Win32 Release MinDependency--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "midl.exe /tlb ".\TSubclass.tlb" /h "TSubclass.h" /iid "TSubclass_i.c" /Oicf "W:\eLungFan\TSubclass\Project\TSubclass.idl""
-Creating command line "rc.exe /l 0x804 /fo"ReleaseMinDependency/TSubclass.res" /d "NDEBUG" "W:\eLungFan\TSubclass\Project\TSubclass.rc"" 
-Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB2.tmp" with contents
+Creating command line "midl.exe /tlb ".\TSubclass.tlb" /h "TSubclass.h" /iid "TSubclass_i.c" /Oicf "C:\Documents and Settings\Administrator\桌面\TSubclass\Project\TSubclass.idl""
+Creating command line "rc.exe /l 0x804 /fo"ReleaseMinDependency/TSubclass.res" /d "NDEBUG" "C:\Documents and Settings\Administrator\桌面\TSubclass\Project\TSubclass.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP383.tmp" with contents
 [
 /nologo /MT /W3 /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /FR"ReleaseMinDependency/" /Fp"ReleaseMinDependency/TSubclass.pch" /Yu"stdafx.h" /Fo"ReleaseMinDependency/" /Fd"ReleaseMinDependency/" /FD /c 
-"W:\eLungFan\TSubclass\Project\MouseHook.cpp"
-"W:\eLungFan\TSubclass\Project\Subclass.cpp"
-"W:\eLungFan\TSubclass\Project\TSubclass.cpp"
-"W:\eLungFan\TSubclass\Project\WinHook.cpp"
+"C:\Documents and Settings\Administrator\桌面\TSubclass\Project\MouseHook.cpp"
+"C:\Documents and Settings\Administrator\桌面\TSubclass\Project\Subclass.cpp"
+"C:\Documents and Settings\Administrator\桌面\TSubclass\Project\TSubclass.cpp"
+"C:\Documents and Settings\Administrator\桌面\TSubclass\Project\WinHook.cpp"
 ]
-Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB2.tmp" 
-Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB3.tmp" with contents
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP383.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP384.tmp" with contents
 [
 /nologo /MT /W3 /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_ATL_STATIC_REGISTRY" /D "_ATL_MIN_CRT" /FR"ReleaseMinDependency/" /Fp"ReleaseMinDependency/TSubclass.pch" /Yc"stdafx.h" /Fo"ReleaseMinDependency/" /Fd"ReleaseMinDependency/" /FD /c 
-"W:\eLungFan\TSubclass\Project\StdAfx.cpp"
+"C:\Documents and Settings\Administrator\桌面\TSubclass\Project\StdAfx.cpp"
 ]
-Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB3.tmp" 
-Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB4.tmp" with contents
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP384.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP385.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinDependency/TSubclass.pdb" /machine:I386 /def:".\TSubclass.def" /out:"ReleaseMinDependency/TSubclass.dll" /implib:"ReleaseMinDependency/TSubclass.lib" 
-.\ReleaseMinDependency\MouseHook.obj
-.\ReleaseMinDependency\StdAfx.obj
-.\ReleaseMinDependency\Subclass.obj
-.\ReleaseMinDependency\TSubclass.obj
-.\ReleaseMinDependency\WinHook.obj
-.\ReleaseMinDependency\TSubclass.res
+".\ReleaseMinDependency\MouseHook.obj"
+".\ReleaseMinDependency\StdAfx.obj"
+".\ReleaseMinDependency\Subclass.obj"
+".\ReleaseMinDependency\TSubclass.obj"
+".\ReleaseMinDependency\WinHook.obj"
+".\ReleaseMinDependency\TSubclass.res"
 ]
-Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB4.tmp"
-Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB5.bat" with contents
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP385.tmp"
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP386.bat" with contents
 [
 @echo off
 regsvr32 /s /c ".\ReleaseMinDependency\TSubclass.dll"
 echo regsvr32 exec. time > ".\ReleaseMinDependency\regsvr32.trg"
 ]
-Creating command line "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAB5.bat"
+Creating command line "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP386.bat"
 Creating Type Library...
 Microsoft (R) 32b/64b MIDL Compiler Version 6.00.0347 
 Copyright (c) Microsoft Corp 1991-2000. All rights reserved.
-Processing W:\eLungFan\TSubclass\Project\TSubclass.idl
+Processing C:\Documents and Settings\Administrator\桌面\TSubclass\Project\TSubclass.idl
 TSubclass.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\oaidl.idl
 oaidl.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\objidl.idl
 objidl.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\unknwn.idl
 unknwn.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\wtypes.idl
 wtypes.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\ocidl.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\basetsd.h
+basetsd.h
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\guiddef.h
+guiddef.h
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\ocidl.idl
 ocidl.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oleidl.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\oleidl.idl
 oleidl.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\servprov.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\servprov.idl
 servprov.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\urlmon.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\urlmon.idl
 urlmon.idl
-Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\msxml.idl
+Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\msxml.idl
 msxml.idl
 Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\oaidl.acf
 oaidl.acf
 Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\ocidl.acf
 ocidl.acf
-64 bit Processing W:\eLungFan\TSubclass\Project\TSubclass.idl
+64 bit Processing C:\Documents and Settings\Administrator\桌面\TSubclass\Project\TSubclass.idl
 TSubclass.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\oaidl.idl
 oaidl.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\objidl.idl
 objidl.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\unknwn.idl
 unknwn.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\wtypes.idl
 wtypes.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\ocidl.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\basetsd.h
+basetsd.h
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\guiddef.h
+guiddef.h
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\ocidl.idl
 ocidl.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oleidl.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\oleidl.idl
 oleidl.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\servprov.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\servprov.idl
 servprov.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\urlmon.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\urlmon.idl
 urlmon.idl
-64 bit Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\msxml.idl
+64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\msxml.idl
 msxml.idl
 64 bit Processing C:\Program Files\Microsoft Platform SDK for Windows XP SP2\include\oaidl.acf
 oaidl.acf
@@ -105,7 +113,7 @@ Linking...
    Creating library ReleaseMinDependency/TSubclass.lib and object ReleaseMinDependency/TSubclass.exp
 <h3>Output Window</h3>
 Performing registration
-Creating command line "bscmake.exe /nologo /o"ReleaseMinDependency/TSubclass.bsc"  .\ReleaseMinDependency\StdAfx.sbr .\ReleaseMinDependency\MouseHook.sbr .\ReleaseMinDependency\Subclass.sbr .\ReleaseMinDependency\TSubclass.sbr .\ReleaseMinDependency\WinHook.sbr"
+Creating command line "bscmake.exe /nologo /o"ReleaseMinDependency/TSubclass.bsc"  ".\ReleaseMinDependency\StdAfx.sbr" ".\ReleaseMinDependency\MouseHook.sbr" ".\ReleaseMinDependency\Subclass.sbr" ".\ReleaseMinDependency\TSubclass.sbr" ".\ReleaseMinDependency\WinHook.sbr""
 Creating browse info file...
 <h3>Output Window</h3>
 
